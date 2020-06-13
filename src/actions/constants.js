@@ -1,0 +1,4 @@
+export const FETCH_FEEDBACK = 'FETCHFEEDBACK'
+export const CLEAR_FEEDBACK = 'CLEAR_FEEDBACK'
+
+export const MARK_CHECKED = 'MARK_CHECKED'
