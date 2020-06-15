@@ -8,14 +8,18 @@ import {
   StatusBar
 } from 'react-native';
 import Feedbacks from './src/components/Feedbacks';
+import TicTac from './src/components/TicTac';
 
 // const App: () => React$Node = () => {
 const App = () => {
   return (
     <SafeAreaView>
       <View style={styles.sectionContainer}>
-        <Text style={styles.sectionTitle}>Feedbacks</Text>
+        {/* <Text style={styles.sectionTitle}>Feedbacks</Text>
         <Feedbacks></Feedbacks>
+         */}
+        <Text style={styles.sectionTitle}>Tic Tac Toe</Text>
+        <TicTac></TicTac>
       </View>
     </SafeAreaView>
   );
@@ -36,7 +40,7 @@ const styles = StyleSheet.create({
   sectionContainer: {
     marginTop: 10,
     paddingHorizontal: 10,
-    backgroundColor:'#eeeeee'
+    backgroundColor: '#eeeeee'
   },
   sectionTitle: {
     fontSize: 24,

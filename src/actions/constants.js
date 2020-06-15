@@ -2,3 +2,5 @@ export const FETCH_FEEDBACK = 'FETCHFEEDBACK'
 export const CLEAR_FEEDBACK = 'CLEAR_FEEDBACK'
 
 export const MARK_CHECKED = 'MARK_CHECKED'
+export const MARK_CELL = 'MARK_CELL'
+export const CLEAR_BOARD = 'CLEAR_BOARD'
