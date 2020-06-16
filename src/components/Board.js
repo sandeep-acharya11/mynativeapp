@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
 import { MarkCell, ClearBoard } from '../actions/tictac'
+import Score from './Score'
 
 const Board = () => {
 
@@ -83,7 +84,7 @@ const Board = () => {
                     <Text style={styles.cellText}>{cells[8]}</Text>
                 </TouchableOpacity>
             </View>
-
+            <Score></Score>
             <TouchableOpacity style={styles.normalButton}
                 onPress={() => {
                     dispatch(ClearBoard())
