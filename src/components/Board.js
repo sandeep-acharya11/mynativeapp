@@ -10,7 +10,8 @@ const Board = () => {
     const { cells, markPlayed } = useSelector(state => state.TicTac)
 
     function onBoardCellClicked(cellId) {
-        dispatch(MarkCell(cellId, (markPlayed == '' || markPlayed == 'O' ? 'X' : 'O')))
+        if (!cells[cellId])
+            dispatch(MarkCell(cellId, (markPlayed == '' || markPlayed == 'O' ? 'X' : 'O')))
     }
 
     return (
@@ -89,7 +90,7 @@ const Board = () => {
                 onPress={() => {
                     dispatch(ClearBoard())
                 }}>
-            <Text>Clear Board</Text>
+                <Text>Clear Board</Text>
             </TouchableOpacity>
         </>
     )
@@ -108,10 +109,10 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         paddingHorizontal: 10
     },
-    normalButton:{
-        marginTop:10,
-        marginBottom:10,
-        justifyContent:"center",
+    normalButton: {
+        marginTop: 10,
+        marginBottom: 10,
+        justifyContent: "center",
         alignItems: "center",
         backgroundColor: "#DDDDDD",
         padding: 10,
@@ -119,7 +120,7 @@ const styles = StyleSheet.create({
         borderWidth: 1
     },
     button: {
-        justifyContent:"center",
+        justifyContent: "center",
         alignItems: "center",
         backgroundColor: "#DDDDDD",
         padding: 10,

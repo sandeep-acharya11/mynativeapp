@@ -1,4 +1,4 @@
-import { MARK_CELL, CLEAR_BOARD } from "../actions/constants";
+import { MARK_CELL, CLEAR_BOARD, UPDATE_WINNER } from "../actions/constants";
 import { ReloadInstructions } from "react-native/Libraries/NewAppScreen";
 
 
@@ -6,7 +6,8 @@ const initialState = {
     player1: { name: 'Player 1', symbol: 'X' },
     player2: { name: 'Player 2', symbol: 'O' },
     cells: Array(9),
-    markPlayed: ''
+    markPlayed: '',
+    scores: []
 }
 const TicTac = (state = initialState, action) => {
     switch (action.type) {
@@ -17,6 +18,8 @@ const TicTac = (state = initialState, action) => {
             return { ...returnVar, markPlayed: action.payload.markPlaying }
         case CLEAR_BOARD:
             return { ...state, cells: [], markPlayed: '' }
+        case UPDATE_WINNER:
+            return { ...state, scores: action.payload.winner }
         default:
             return { ...state }
     }
