@@ -7,7 +7,7 @@ import {
   Text,
   StatusBar
 } from 'react-native';
-import Feedbacks from './src/components/Feedbacks';
+// import Feedbacks from './src/components/Feedbacks';
 import TicTac from './src/components/TicTac';
 
 // const App: () => React$Node = () => {
@@ -19,6 +19,7 @@ const App = () => {
         <Feedbacks></Feedbacks>
          */}
         <Text style={styles.sectionTitle}>Tic Tac Toe</Text>
+        <Text style={styles.sectionDescription}>2 Player game</Text>
         <TicTac></TicTac>
       </View>
     </SafeAreaView>
@@ -40,17 +41,23 @@ const styles = StyleSheet.create({
   sectionContainer: {
     marginTop: 10,
     paddingHorizontal: 10,
-    backgroundColor: '#eeeeee'
+    backgroundColor: '#eeeeee',
+    justifyContent: "center",
+    alignItems: 'center'
   },
   sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
+    fontSize: 40,
+    fontWeight: '800',
+    justifyContent: 'center',
+    marginTop: 20,
+    letterSpacing: 5
     // color: Colors.black,
   },
   sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
+    marginBottom: 8,
+    fontSize: 14,
+    justifyContent: 'center',
+    letterSpacing: 2
     // color: Colors.dark,
   },
   highlight: {

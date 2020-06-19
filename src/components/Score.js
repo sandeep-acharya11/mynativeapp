@@ -11,12 +11,13 @@ const Score = () => {
     const winningCombinations = ['0,1,2', '3,4,5', '6,7,8', '0,3,6', '1,4,7', '2,5,8', '0,4,8', '2,4,6']
 
     function CheckWinningStatus() {
+        var winner;
         winningCombinations.map(combination => {
             var cellids = combination.split(',')
             console.log("Checking for : " + combination + " :: " + cells[cellids[0]] + "," + cells[cellids[1]] + "," + cells[cellids[2]])
 
             if (cells[cellids[0]] && (cells[cellids[0]] == cells[cellids[1]] && cells[cellids[0]] == cells[cellids[2]])) {
-                var winner = player1.symbol === cells[cellids[0]] ? player1 : player2
+                winner = player1.symbol === cells[cellids[0]] ? player1 : player2
                 Alert.alert(
                     'Winner',
                     winner.name + ' has won the game.',
@@ -27,10 +28,24 @@ const Score = () => {
                         }],
                     { cancelable: false }
                 );
-                matchDrawn = false;
             }
         })
-        console.log("checked winning status")
+
+        if (winner === undefined) {
+            var matchDrawn = ((cells.filter(x => (x === 'X' || x === 'O')).length == 9) ? true : false)
+            console.log('Drawn :: ' + matchDrawn)
+            if (matchDrawn)
+                Alert.alert(
+                    'Drawn',
+                    'Match has been drawn with no result',
+                    [
+                        {
+                            text: 'OK',
+                            onPress: () => { dispatch(ClearBoard()) }
+                        }],
+                    { cancelable: false }
+                );
+        }
     }
     useEffect(() => {
         CheckWinningStatus()
@@ -39,7 +54,7 @@ const Score = () => {
     return (
         <View>
             <Text>
-                
+
             </Text>
         </View>
 

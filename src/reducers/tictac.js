@@ -3,8 +3,8 @@ import { ReloadInstructions } from "react-native/Libraries/NewAppScreen";
 
 
 const initialState = {
-    player1: { name: 'Player 1', symbol: 'X' },
-    player2: { name: 'Player 2', symbol: 'O' },
+    player1: { name: 'Player 1-[X]', symbol: 'X' },
+    player2: { name: 'Player 2-[O]', symbol: 'O' },
     cells: Array(9),
     markPlayed: '',
     scores: []
