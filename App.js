@@ -20,7 +20,7 @@ const App = () => {
           Mahak Bakes
         </Text>
       </View>
-      <View style={styles.sectionContainer}>
+      <ScrollView style={styles.sectionContainer}>
         {/* <Text style={styles.sectionTitle}>Feedbacks</Text>
         <Feedbacks></Feedbacks>
          */}
@@ -28,7 +28,7 @@ const App = () => {
         <Text style={styles.sectionDescription}>2 Player game</Text>
         <TicTac></TicTac> */}
         <Products></Products>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
@@ -37,13 +37,14 @@ const App = () => {
 const styles = StyleSheet.create({
   scrollView: {
     // backgroundColor: Colors.lighter,
+    marginHorizontal: 20,
   },
   engine: {
     position: 'absolute',
     right: 0,
   },
   header: {
-    backgroundColor: '#000',
+    backgroundColor: '#f79aaa',
     alignItems:'center',
     padding:10
   },
@@ -58,9 +59,10 @@ const styles = StyleSheet.create({
   },
   sectionContainer: {
     marginTop: 10,
+    // marginHorizontal
     paddingHorizontal: 10,
     // backgroundColor: '#eeeeee',
-    justifyContent: "center",
+    // justifyContent: "center",
     // alignItems: 'center'
   },
   sectionTitle: {

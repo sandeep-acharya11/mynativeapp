@@ -24,7 +24,7 @@ const Products = () => {
             {
                 isLoading ? <ActivityIndicator size='large'></ActivityIndicator> :
                     allProducts.map(x =>
-                        <TouchableOpacity style={styles.button}>
+                        <TouchableOpacity style={styles.button} key={x.ProductId}>
                             <Text style={styles.cellText}>
                                 {x.ProductName}
                             </Text>
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
         // borderWidth: 1
         marginBottom: 10,
         elevation: 8,
-        backgroundColor: "#009688",
+        backgroundColor: "#905656",
         borderRadius: 10,
         paddingVertical: 10,
         paddingHorizontal: 12
