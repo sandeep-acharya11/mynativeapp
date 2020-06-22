@@ -9,18 +9,25 @@ import {
 } from 'react-native';
 // import Feedbacks from './src/components/Feedbacks';
 import TicTac from './src/components/TicTac';
+import Products from './src/components/Products';
 
 // const App: () => React$Node = () => {
 const App = () => {
   return (
     <SafeAreaView>
+      <View style={styles.header}>
+        <Text style={styles.headerText}>
+          Mahak Bakes
+        </Text>
+      </View>
       <View style={styles.sectionContainer}>
         {/* <Text style={styles.sectionTitle}>Feedbacks</Text>
         <Feedbacks></Feedbacks>
          */}
-        <Text style={styles.sectionTitle}>Tic Tac Toe</Text>
+        {/* <Text style={styles.sectionTitle}>Tic Tac Toe</Text>
         <Text style={styles.sectionDescription}>2 Player game</Text>
-        <TicTac></TicTac>
+        <TicTac></TicTac> */}
+        <Products></Products>
       </View>
     </SafeAreaView>
   );
@@ -35,15 +42,26 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 0,
   },
+  header: {
+    backgroundColor: '#000',
+    alignItems:'center',
+    padding:10
+  },
+  headerText:{
+    color: "#fff",
+    fontFamily: 'Roboto',
+    fontSize: 30,
+    letterSpacing: 3
+  },
   body: {
     // backgroundColor: Colors.white,
   },
   sectionContainer: {
     marginTop: 10,
     paddingHorizontal: 10,
-    backgroundColor: '#eeeeee',
+    // backgroundColor: '#eeeeee',
     justifyContent: "center",
-    alignItems: 'center'
+    // alignItems: 'center'
   },
   sectionTitle: {
     fontSize: 40,
