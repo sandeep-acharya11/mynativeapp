@@ -10,7 +10,7 @@ const initialState = {
 export default function Product(state = initialState, action) {
     switch (action.type) {
         case GET_ALL_PRODUCTS:
-            return { ...state, isLoading: true }
+            return { ...state, allProducts:[], isLoading: true }
         case GET_ALL_PRODUCTS_SUCCESS:
             // console.log(allProducts.payload.map(x => x.name).join(','))
             return { ...state, allProducts: action.payload, isLoading:false }

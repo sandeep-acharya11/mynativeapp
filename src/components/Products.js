@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react'
-import { View, Text, TouchableOpacity, StyleSheet, ActivityIndicator } from 'react-native'
+import { View, Text, TouchableOpacity, StyleSheet, ActivityIndicator, Button, ScrollView } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { GetAllProducts } from '../actions/products'
 import Product from '../reducers/product'
-import { Colors } from 'react-native/Libraries/NewAppScreen'
 
 const Products = () => {
     const { allProducts, isLoading } = useSelector(state => state.Product)
@@ -20,21 +19,23 @@ const Products = () => {
     }, [allProducts])
 
     return (
-        <View style={styles.container}>
-            {
-                isLoading ? <ActivityIndicator size='large'></ActivityIndicator> :
-                    allProducts.map(x =>
-                        <TouchableOpacity style={styles.button} key={x.ProductId}>
-                            <Text style={styles.cellText}>
-                                {x.ProductName}
-                            </Text>
-                            <Text style={{ fontStyle: 'italic', color: 'white' }}>
-                                {x.Description}
-                            </Text>
-                        </TouchableOpacity>
-                    )
-            }
-        </View>
+        <ScrollView>
+            <View style={styles.container}>
+                {
+                    isLoading ? <ActivityIndicator size='large'></ActivityIndicator> :
+                        allProducts.map(x =>
+                            <TouchableOpacity style={styles.button} key={x.ProductId}>
+                                <Text style={styles.cellText}>
+                                    {x.ProductName}
+                                </Text>
+                                <Text style={{ fontStyle: 'italic', color: 'white' }}>
+                                    {x.Description}
+                                </Text>
+                            </TouchableOpacity>
+                        )
+                }
+            </View>
+        </ScrollView>
     )
 }
 
@@ -53,6 +54,7 @@ const styles = StyleSheet.create({
         // flex: 1,
         justifyContent: "center",
         paddingHorizontal: 10,
+        margin:10
         // borderColor: 'black',
         // borderWidth: 1,
         // alignItems:'center'
