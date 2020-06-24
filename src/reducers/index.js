@@ -4,9 +4,14 @@ import { combineReducers } from "redux";
 // import Error from './error'
 
 import Feedback from './feedback'
+import TicTac from './tictac'
+import Product from './product'
+
 
 const rootReducer = combineReducers({
-    Feedback
+    Feedback,
+    TicTac,
+    Product
 });
 
 export default rootReducer

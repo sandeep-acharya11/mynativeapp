@@ -6,7 +6,6 @@ const initialState = {
 }
 
 const Feedback = (state = initialState, action) => {
-    console.log("Feedback reducer:")
     switch (action.type) {
         case FETCH_FEEDBACK:
             var returnObj = { ...state }
