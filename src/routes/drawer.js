@@ -5,7 +5,7 @@ import AboutStack from './aboutStack'
 
 const RootDrawerNavigator = createDrawerNavigator({
     Home: {
-        screen: HomeStack
+        screen: HomeStack,
     },
     About: {
         screen: AboutStack

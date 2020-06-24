@@ -5,11 +5,10 @@ import { View, Text, Button, StyleSheet, ScrollView } from 'react-native'
 const About = ({ navigation }) => {
     return (
         <ScrollView style={styles.container}>
-            <Text style={styles.cellText}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of 
-            type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic 
-            typesetting, remaining essentially unchanged. </Text><Text style={styles.cellText}>It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-             Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</Text>
+            <Text style={styles.cellText}>A dream doesn't become reality through magic; it takes sweat, determination, and hard work. 
+            </Text><Text style={styles.cellText}>Dynamic knowledge in respective field, practical skills in almost every part and zeal to rise higher with every passing moment
+            Mahak Sharma, the Founder of Mahak Bakes, started her journey. </Text><Text style={styles.cellText}>The journey is never-ending and so is her determination. 
+            It’s been just a few miles, a journey of a thousand miles still awaits</Text>
             {/* <TouchableOpacity style={styles.button} onPress={() => {
                 navigation.navigate('Products')
             }}>

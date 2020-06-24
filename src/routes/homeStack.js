@@ -6,6 +6,7 @@ import Home from '../components/Home'
 
 import Header from '../shared/header'
 import React from 'react'
+import { Text } from 'react-native'
 
 const screens = {
 
@@ -17,16 +18,18 @@ const screens = {
                 headerTitle: () => <Header navigation={navigation}></Header>
             }
         }
-    }, Products: {
+    },
+    Products: {
         screen: Products,
         navigationOptions: ({ navigation }) => {
             // title: "Home"
             return {
-                headerTitle: () => <Header navigation={navigation}></Header>
+                headerTitle: () => <Header showMenuIcon='false' title='Products' navigation={navigation}></Header>,
+                // headerRight: () => <Text></Text>,
+                // headerLeft: () => <Text></Text>
             }
         }
     },
-
 }
 
 const HomeStack = createStackNavigator(screens, {
