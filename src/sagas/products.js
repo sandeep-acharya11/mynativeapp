@@ -15,7 +15,7 @@ function* GetAllProducts() {
         // yield put({ type: LOADING_STOP })
         yield put({ type: GET_ALL_PRODUCTS_SUCCESS, payload: response.data });
     } catch (error) {
-        console.log("Error :: " + error.message + error.stackTrace)
+        console.log("Error :: " + error.message)
         // yield put({ type: LOADING_STOP })
         // yield put({type:ERROR_OCCURED, payload: error})
         // yield put(ErrorOccured(error));

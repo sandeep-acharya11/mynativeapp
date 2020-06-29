@@ -1,10 +1,14 @@
 import React from 'react'
-import { View, Text, Button, StyleSheet, ScrollView } from 'react-native'
+import { View, Text, Button, StyleSheet, ScrollView, Image } from 'react-native'
+import { Card } from 'react-native-elements'
 // import { TouchableOpacity } from 'react-native-gesture-handler'
 
 const About = ({ navigation }) => {
     return (
         <ScrollView style={styles.container}>
+            <Card  containerStyle={{padding: 10, margin:0}}>
+            <Image style={{width:'100%'}} source={require('../asset/mahakbakes_small.png')} />
+
             <Text style={styles.cellText}>A dream doesn't become reality through magic; it takes sweat, determination, and hard work. 
             </Text><Text style={styles.cellText}>Dynamic knowledge in respective field, practical skills in almost every part and zeal to rise higher with every passing moment
             Mahak Sharma, the Founder of Mahak Bakes, started her journey. </Text><Text style={styles.cellText}>The journey is never-ending and so is her determination. 
@@ -14,6 +18,7 @@ const About = ({ navigation }) => {
             }}>
                 <Text style={{color:'white'}}>Explore Products</Text>
             </TouchableOpacity> */}
+            </Card>
         </ScrollView>
     )
 }
@@ -27,15 +32,17 @@ const styles = StyleSheet.create({
     container: {
         // flex: 1,
         // justifyContent: "center",
-        paddingHorizontal: 10,
+        // paddingHorizontal: 10,
         // borderColor: 'black',
         // borderWidth: 1,
         // alignItems:'center'
     },
     cellText: {
-        fontSize: 16,
+        fontSize: 14,
         alignSelf: "center",
-        padding:10
+        // padding: 10
+        marginTop: 10,
+        lineHeight: 20
 
     },
     button: {
