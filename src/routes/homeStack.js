@@ -3,10 +3,10 @@ import { createStackNavigator } from 'react-navigation-stack'
 // import TicTac from '../components/TicTac'
 import Products from '../components/Products'
 import Home from '../components/Home'
-
+import ProductDetails from '../components/ProductDetails'
 import Header from '../shared/header'
 import React from 'react'
-import { Text } from 'react-native'
+// import { Text } from 'react-native'
 
 const screens = {
 
@@ -29,7 +29,18 @@ const screens = {
                 // headerLeft: () => <Text></Text>
             }
         }
-    },
+    },//ProductDetails
+    ProductDetails: {
+        screen: ProductDetails,
+        navigationOptions: ({ navigation }) => {
+            // title: "Home"
+            return {
+                headerTitle: () => <Header showMenuIcon='false' title='Product Details' navigation={navigation}></Header>,
+                // headerRight: () => <Text></Text>,
+                // headerLeft: () => <Text></Text>
+            }
+        }
+    },//ProductDetails
 }
 
 const HomeStack = createStackNavigator(screens, {

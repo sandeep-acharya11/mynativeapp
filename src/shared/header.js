@@ -12,12 +12,12 @@ export default function Header({ navigation, showMenuIcon, title }) {
             {
                 showMenuIcon != 'false' &&
                 <TouchableOpacity style={{ position: "absolute", left: 0 }} onPress={menuHandler}>
-                        <Icon name='cake' size={30}  type='material' onPress={menuHandler}/>
+                        <Icon name='menu' size={30}  type='material' />
                 </TouchableOpacity>
             }<View style={{ justifyContent: 'center', alignItems: 'center' }}>
                 {
                     title ? <Text style={{ fontSize: 18, letterSpacing:2, left: -35 }}>{title}</Text> :
-                        <Text style={{ fontSize: 25, letterSpacing:2 }}>
+                        <Text style={{ fontSize: 25, letterSpacing:3 }}>
                             Mahak Bakes
                 </Text>
                 }
